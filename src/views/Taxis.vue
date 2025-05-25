@@ -64,7 +64,7 @@ onMounted(() => {
 <style scoped>
 .contenedor {
   width: 100%;
-  margin: auto;
+  margin: 30px auto;
   font-family: Arial, sans-serif;
   display: flex;
   flex-wrap: wrap;

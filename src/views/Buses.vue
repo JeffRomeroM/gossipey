@@ -118,7 +118,7 @@ onMounted(() => {
 <style scoped>
 .contenedor {
   width: 100%;
-  margin: auto;
+  margin: 30px auto;
   padding: 20px;
   font-family: Arial, sans-serif;
   transition: background-color 0.3s, color 0.3s;
