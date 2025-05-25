@@ -1,6 +1,6 @@
 <template>
   <div class="contenedor">
-    <h1>Servicios de Motomandado</h1>
+    <h1>Servicios de Motomandados</h1>
 
     <input
       v-model="busqueda"
