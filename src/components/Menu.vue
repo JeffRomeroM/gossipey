@@ -17,7 +17,7 @@
     </RouterLink>
     <RouterLink to="/motos" class="nav-item">
       <span class="icon"><img src="../iconos/moto.png" alt="" /></span>
-      <span class="label">Motos</span>
+      <span class="label">Motomandados</span>
     </RouterLink>
   </nav>
 </template>
@@ -61,6 +61,7 @@ import { RouterLink } from 'vue-router'
   font-size: 24px;
   transition: color 0.3s;
   position: relative;
+  padding: 3px;
 }
 
 .nav-item:hover {
@@ -90,12 +91,19 @@ import { RouterLink } from 'vue-router'
 .router-link-active {
   color: #3b82f6;
   font-weight: bold;
+  background-color: #f3f3f3;
+  padding: 3px;
+  border-radius: 4px;
 }
 
 .icon img {
   width: 24px;
 }
-
+@media (max-width: 740px){
+  .menu{
+    width: 7%;
+  }
+}
 /* Vista móvil estilo TikTok */
 @media (max-width: 640px) {
   .menu {
@@ -131,6 +139,7 @@ import { RouterLink } from 'vue-router'
     font-size: 16px;
     color: #555;
     position: relative;
+    background-color: #ffffff;
   }
 
   .label {
@@ -146,6 +155,9 @@ import { RouterLink } from 'vue-router'
   .router-link-active .label {
     color: #d19a02;
     font-weight: bold;
+    
+    background-color: #ffffff;
+    padding: 0px;
   }
 }
 </style>

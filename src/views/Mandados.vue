@@ -1,6 +1,6 @@
 <template>
   <div class="contenedor">
-    <h1>Servicios de Motomandados</h1>
+    <h1>Motomandados</h1>
 
     <input
       v-model="busqueda"
@@ -73,7 +73,7 @@ onMounted(() => {
 <style scoped>
 .contenedor {
   width: 100%;
-  margin: 30px auto;
+  margin: 50px auto;
   font-family: Arial, sans-serif;
   display: flex;
   flex-wrap: wrap;
@@ -82,7 +82,7 @@ onMounted(() => {
 
 h1 {
   text-align: center;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .buscador {
