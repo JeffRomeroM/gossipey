@@ -30,20 +30,26 @@
         :key="ruta.origen + ruta.destino + ruta.horario"
       >
         <div class="card-header">
-          <h2>{{ ruta.origen }} → {{ ruta.destino }}</h2>
+          <h2>{{ ruta.origen }} → {{ ruta.destino }} <strong>Transporte </strong><span>{{ ruta.empresa }}</span></h2>
         </div>
         <div class="card-body">
           <p><strong>Horario:</strong> {{ ruta.horario }}</p>
-          <p><strong>Costo:</strong> {{ ruta.costo }}</p>
+          <p><strong>Costo:</strong> C$ {{ ruta.costo }}</p>
           <p><strong>Empresa:</strong> {{ ruta.empresa }}</p>
+          <p><strong>Duración:</strong> {{ ruta.duracion }}</p>
+          <p><strong>Frecuencia:</strong> {{ ruta.frecuencia }}</p>
+          <p><strong>Opciones de pago:</strong> {{ ruta.pago }}</p>
+          <p><strong>Paradas:</strong> {{ ruta.paradas }}</p>
+          <p><strong>Tipo de Unidad:</strong> {{ ruta.tipoUnidad }}</p>
+          <p><strong>Recomendaciones:</strong> {{ ruta.recomendaciones }}</p>
           <p>
             <strong>Contacto: </strong>
-            <a :href="'tel:' + ruta.contacto" title="Llamar">
-              <font-awesome-icon :icon="['fas', 'phone']" style="color: green; font-size: 18px; margin-right: 5px;" />
+            <a :href="'tel:' + ruta.contacto" title="Llamar" class="contact">
+              <img src="../iconos/llamada.png" alt="" width="20px">
 
             </a>
-            <a :href="'https://wa.me/' + ruta.contacto" target="_blank" title="WhatsApp">
-              <font-awesome-icon :icon="['fab', 'whatsapp']" style="color: green; font-size: 20px;" />
+            <a :href="'https://wa.me/' + ruta.contacto" target="_blank" title="WhatsApp" class="contact">
+              <img src="../iconos/whatsapp.png" alt="" width="20px">
 
             </a>
             {{ ruta.contacto }}
@@ -77,7 +83,7 @@ const modoOscuro = ref(false)
 
 const cargarRutas = async () => {
   try {
-    const response = await fetch('https://script.google.com/macros/s/AKfycbwnAyPLgHNJxjBEDjdZCJSC5UUKrj1bsSxx84Odbzco5uMnyGDOp8Ldh2I-bK9birp_/exec')
+    const response = await fetch('https://script.google.com/macros/s/AKfycbxJBLfR3N7IoOf0BaQMIy4gw6I22dARPqG3cvvLc8H-y7apixOvC2pd9ElKm4ubiCqr/exec')
     const data = await response.json()
     rutas.value = data.map(r => ({ ...r, mostrarMapa: false }))
   } catch (error) {
@@ -127,6 +133,9 @@ onMounted(() => {
 .oscuro {
   background-color: #121212;
   color: #fff;
+}
+.contact{
+  margin-left: 10px;
 }
 
 h1 {
