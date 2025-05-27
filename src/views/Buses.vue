@@ -30,7 +30,7 @@
         :key="ruta.origen + ruta.destino + ruta.horario"
       >
         <div class="card-header">
-          <h2>{{ ruta.origen }} → {{ ruta.destino }} <strong>Transporte </strong><span>{{ ruta.empresa }}</span></h2>
+          <h2>{{ ruta.origen }} → {{ ruta.destino }} <span>Transporte {{ ruta.empresa }}</span></h2>
         </div>
         <div class="card-body">
           <p><strong>Horario:</strong> {{ ruta.horario }}</p>
@@ -199,13 +199,13 @@ h1 {
 .card-header h2 {
   margin: 0;
   font-size: 18px;
-  color: #007BFF;
+  color: #d19a02;
   margin-bottom: 10px;
   text-align: center;
 }
 
 .card-body p {
-  margin: 5px 0;
+  margin: 7px 0;
   font-size: 14px;
 }
 
@@ -225,7 +225,7 @@ h1 {
   margin-top: 10px;
   padding: 8px 12px;
   font-size: 14px;
-  background-color: #007BFF;
+  background-color: #d19a02;
   color: white;
   border: none;
   border-radius: 6px;

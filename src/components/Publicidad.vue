@@ -1,7 +1,13 @@
 <template>
     <div v-if="mostrar && publicidadActual" class="modal">
       <div class="contenido">
-        <img v-if="publicidadActual.imagen" :src="publicidadActual.imagen" alt="Imagen de publicidad" class="imagen" />
+        <img
+          v-if="publicidadActual.imagen"
+          :src="publicidadActual.imagen"
+          alt="Imagen de publicidad"
+          class="imagen"
+        />
+
         <h2>{{ publicidadActual.nombre }}</h2>
         <p class="descripcion">{{ publicidadActual.descripcion }}</p>
         <p class="contacto"><strong>Contacto:</strong> {{ publicidadActual.contacto }}</p>
@@ -22,7 +28,7 @@
   
   const cargarPublicidades = async () => {
     try {
-      const response = await fetch('https://script.google.com/macros/s/AKfycbyLZkdbtMFOaH_7XQy8QFCrHgRq1nApdrMkSwz6LsdTlxH9akQVHIoEPOwSycbmqhkG/exec')
+      const response = await fetch('https://script.google.com/macros/s/AKfycbyNqiapCsNjqqn_dYCXRSczK0wssBVBUw3eBHVWhzJSGayFyoC2TF9yWCH47JKtne8/exec')
       const data = await response.json()
       publicidades.value = data
     } catch (error) {
