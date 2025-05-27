@@ -14,6 +14,8 @@
         <h2>{{ taxi.nombre }} </h2>
         <p><strong>Horario:</strong> {{ taxi.horario }}</p>
         <p><strong>Descripción:</strong> {{ taxi.descripcion }}</p>
+        <p><strong>Zona:</strong> Nueva Guinea</p>
+        <p><strong>Forma de pago:</strong> Billetera Movil, Efectivo</p>
         <p>
             <strong>Contacto: </strong>
             <a :href="'tel:' + taxi.contacto" title="Llamar">
@@ -98,8 +100,7 @@ h1 {
   padding: 20px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
   background-color: #fff;
-  transition: transform 0.2s;
-  max-height: 150px;
+  transition: transform 0.2s; 
   overflow-y: auto;
 }
 
